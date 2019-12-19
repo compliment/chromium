@@ -1111,7 +1111,7 @@ VaapiVideoDecodeAccelerator::DecideBufferAllocationMode() {
   // depends on the bitstream and sometimes it's not enough to cover the amount
   // of frames needed by the client pipeline (see b/133733739).
   // TODO(crbug.com/911754): Enable for VP9 Profile 2.
-  if (IsGeminiLakeOrLater() &&
+  if (false && IsGeminiLakeOrLater() &&
       (profile_ == VP9PROFILE_PROFILE0 || profile_ == VP8PROFILE_ANY)) {
     // Add one to the reference frames for the one being currently egressed, and
     // an extra allocation for both |client_| and |decoder_|, see
